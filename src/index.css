@@ -1,0 +1,401 @@
+/* ==========================================================================
+   ASOCIACIÓN SANTAFESINA DE LEVANTAMIENTO OLÍMPICO DE PESAS (ASLOP)
+   Design System & Global Institutional Styles
+   ========================================================================== */
+
+:root {
+  /* Paleta Institucional Oficial */
+  --color-primary: #102A43;
+  --color-primary-dark: #091a2b;
+  --color-primary-light: #1b3d5e;
+  --color-secondary: #36A9D6;
+  --color-secondary-dark: #2288b2;
+  --color-secondary-light: #e6f6fd;
+  --color-accent: #C62835;
+  --color-accent-dark: #9e1f2a;
+  --color-accent-light: #fbebee;
+  --color-background: #FFFFFF;
+  --color-surface: #F2F5F7;
+  --color-surface-hover: #e6ecf1;
+  --color-surface-subtle: #fafbfd;
+  --color-text: #102A43;
+  --color-text-secondary: #52616B;
+  --color-text-muted: #74838e;
+  --color-border: #D9E2EC;
+  --color-border-subtle: #e9eff5;
+  
+  /* Colores Funcionales y de Estado */
+  --color-success: #237A57;
+  --color-success-bg: #eaf5f0;
+  --color-warning: #9A6700;
+  --color-warning-bg: #fdf6e6;
+  --color-error: #B42318;
+  --color-error-bg: #feeceb;
+
+  /* Tipografías */
+  --font-heading: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Espaciado y Layout */
+  --max-width: 1240px;
+  --header-height: 96px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  /* Sombras sobrias y profesionales */
+  --shadow-subtle: 0 1px 2px rgba(16, 42, 67, 0.05);
+  --shadow-card: 0 2px 8px rgba(16, 42, 67, 0.06), 0 1px 3px rgba(16, 42, 67, 0.04);
+  --shadow-card-hover: 0 8px 24px rgba(16, 42, 67, 0.10), 0 2px 6px rgba(16, 42, 67, 0.04);
+  --shadow-nav: 0 4px 20px rgba(16, 42, 67, 0.08);
+
+  /* Transiciones */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset y caja */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Encabezados y Jerarquía */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 3.5vw + 1rem, 3.25rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.25rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 1.2vw + 0.8rem, 1.6rem);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+}
+
+p.lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* Enlaces y foco accesible */
+a {
+  color: var(--color-secondary-dark);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Skip to content para accesibilidad WCAG */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  z-index: 99999;
+  transition: top var(--transition-fast);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 16px;
+  color: #FFFFFF;
+}
+
+/* Contenedores globales */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 3vw, 2rem);
+  padding-right: clamp(1rem, 3vw, 2rem);
+}
+
+.section-py {
+  padding-top: clamp(3rem, 6vw, 5.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5.5rem);
+}
+
+.section-py-sm {
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+/* Encabezado de Sección Reutilizable */
+.section-header {
+  margin-bottom: clamp(2rem, 3.5vw, 3rem);
+}
+
+.section-header.text-center {
+  text-align: center;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.section-badge.badge-accent {
+  background-color: var(--color-accent-light);
+  color: var(--color-accent-dark);
+  border-color: rgba(198, 40, 53, 0.2);
+}
+
+.section-badge.badge-secondary {
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+  border-color: rgba(54, 169, 214, 0.25);
+}
+
+.section-subtitle {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+/* Botones del Sistema */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(16, 42, 67, 0.2);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-dark);
+  color: #FFFFFF;
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent-dark);
+  color: #FFFFFF;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-border);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-surface);
+  border-color: var(--color-text-secondary);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-white:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.btn-sm {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+}
+
+.btn-lg {
+  padding: 15px 28px;
+  font-size: 1.05rem;
+}
+
+/* Tarjetas Institucionales */
+.card {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: #bccadc;
+}
+
+/* Badges / Etiquetas de Estado */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.tag-success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.tag-warning {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.tag-info {
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+}
+
+.tag-neutral {
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.tag-accent {
+  background-color: var(--color-accent-light);
+  color: var(--color-accent-dark);
+}
+
+/* Indicadores de nota institucional */
+.institutional-note {
+  background-color: var(--color-surface-subtle);
+  border-left: 4px solid var(--color-secondary);
+  padding: 14px 18px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.institutional-note.note-warning {
+  border-left-color: var(--color-warning);
+  background-color: var(--color-warning-bg);
+}
+
+/* Accesibilidad y Reducción de Movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

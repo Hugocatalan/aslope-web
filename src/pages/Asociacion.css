@@ -1,0 +1,304 @@
+/* ==========================================================================
+   ASOCIACIÓN PAGE STYLES
+   ========================================================================== */
+
+.page-header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+}
+
+.page-title {
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  margin-top: 10px;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.page-lead {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  color: var(--color-text-secondary);
+  max-width: 860px;
+  line-height: 1.6;
+}
+
+/* Grilla Misión Visión */
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.mv-card {
+  padding: clamp(1.8rem, 2.5vw, 2.2rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.mv-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.mv-card-title {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.mv-card-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.values-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.values-list strong {
+  color: var(--color-primary);
+}
+
+/* Historia */
+.history-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.history-text p {
+  margin-bottom: 16px;
+  line-height: 1.65;
+}
+
+.history-quote {
+  margin-top: 24px;
+  border-left: 4px solid var(--color-accent);
+  padding: 16px 20px;
+  background-color: var(--color-surface);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.history-quote blockquote {
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.history-image-card {
+  overflow: hidden;
+}
+
+.history-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.history-image-caption {
+  padding: 12px 16px;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.history-stats-card {
+  padding: 20px;
+}
+
+.stats-card-title {
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+.stats-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stats-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.88rem;
+}
+
+.stats-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.stats-val {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Gobernanza / Autoridades */
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.governance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.gov-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid var(--color-secondary);
+}
+
+.gov-role-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-secondary-dark);
+  margin-bottom: 8px;
+}
+
+.gov-name {
+  font-size: 1.1rem;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.gov-dept {
+  font-size: 0.86rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 14px;
+}
+
+.gov-term {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px dashed var(--color-border);
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* Comisiones Especiales */
+.comisiones-box {
+  padding: 24px;
+  background-color: var(--color-surface);
+}
+
+.comisiones-title {
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+  color: var(--color-primary);
+}
+
+.comisiones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.comision-col h4 {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.comision-col p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+/* Afiliaciones */
+.afiliaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.afil-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.afil-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+  margin-bottom: 12px;
+}
+
+.afil-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.afil-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+/* Responsividad */
+@media (max-width: 960px) {
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .governance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .comisiones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .afiliaciones-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .governance-grid {
+    grid-template-columns: 1fr;
+  }
+}

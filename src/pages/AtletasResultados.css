@@ -1,0 +1,173 @@
+/* ==========================================================================
+   ATLETAS Y RESULTADOS PAGE STYLES
+   ========================================================================== */
+
+.records-filter-card {
+  padding: 20px;
+  background-color: var(--color-surface);
+}
+
+.filter-row {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-search-group {
+  flex: 1;
+  min-width: 260px;
+}
+
+.btn-toggle-group {
+  display: flex;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.btn-toggle {
+  padding: 8px 14px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-toggle:not(:last-child) {
+  border-right: 1px solid var(--color-border);
+}
+
+.btn-toggle.active {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--color-text-muted);
+}
+
+.filter-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  font-size: 0.88rem;
+  font-family: var(--font-body);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.records-table-card {
+  background-color: var(--color-background);
+  padding: 20px;
+}
+
+.records-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.records-table-title {
+  font-size: 1.25rem;
+}
+
+.records-count {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.lift-cell {
+  background-color: var(--color-surface-subtle);
+}
+
+.lift-total {
+  background-color: var(--color-surface);
+  font-size: 0.95rem;
+}
+
+.font-sm {
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+/* Categorías IWF */
+.iwf-categories-card {
+  padding: 24px;
+  background-color: var(--color-surface);
+}
+
+.iwf-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.iwf-card-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 18px;
+}
+
+.iwf-categories-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.iwf-col-title {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.iwf-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.iwf-tag {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .filter-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .iwf-categories-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,108 @@
+.club-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.club-card-header {
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  border-bottom: 1px solid var(--color-border-subtle);
+  background-color: var(--color-surface-subtle);
+}
+
+.club-icon-avatar {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.club-title {
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+
+.club-sigla {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.club-card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.club-details-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.club-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+}
+
+.club-detail-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.club-dept {
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+}
+
+.club-address {
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.club-field-label {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.club-field-val {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.club-description {
+  font-size: 0.86rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  background-color: var(--color-surface);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-top: auto;
+}
+
+.club-card-footer {
+  padding: 14px 20px;
+  border-top: 1px solid var(--color-border-subtle);
+}

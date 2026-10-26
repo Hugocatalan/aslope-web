@@ -1,0 +1,369 @@
+/* ==========================================================================
+   FOOTER STYLES
+   ========================================================================== */
+
+.site-footer {
+  margin-top: auto;
+  background-color: var(--color-primary);
+  color: #D9E2EC;
+  border-top: 3px solid var(--color-secondary);
+}
+
+.footer-top {
+  padding: clamp(3rem, 5vw, 4.5rem) 0 2.5rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+/* Columna de Marca */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.footer-shield {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  padding: 3px;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 0 3px rgba(54, 169, 214, 0.35);
+}
+
+.footer-acronym {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.footer-fullname {
+  font-size: 0.78rem;
+  color: #BCCADC;
+  line-height: 1.25;
+}
+
+.footer-description {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #9FB3C8;
+  margin-bottom: 18px;
+}
+
+.footer-credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.credential-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #E2E8F0;
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-secondary {
+  color: var(--color-secondary) !important;
+}
+
+/* Encabezados y Enlaces del Footer */
+.footer-heading {
+  font-family: var(--font-heading);
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-secondary);
+  border-radius: 2px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #BCCADC;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
+/* Contactos Footer */
+.footer-contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: #BCCADC;
+  margin-bottom: 20px;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.contact-icon {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer-contact-list a {
+  color: #BCCADC;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  word-break: break-all;
+}
+
+.footer-contact-list a:hover {
+  color: #FFFFFF;
+}
+
+.footer-instagram-link {
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--transition-fast);
+}
+
+.footer-contact-list li:hover .instagram-icon {
+  color: #FFFFFF;
+  transform: scale(1.1);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.footer-cta-box {
+  margin-top: 10px;
+}
+
+.footer-cta-box .btn {
+  width: 100%;
+}
+
+/* Franja Inferior */
+.footer-bottom {
+  background-color: var(--color-primary-dark);
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8125rem;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.copyright-text {
+  color: #829AB1;
+  font-size: 0.8125rem;
+  margin: 0;
+}
+
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #829AB1;
+}
+
+.legal-links a {
+  color: #BCCADC;
+  text-decoration: none;
+}
+
+.legal-links a:hover {
+  color: #FFFFFF;
+}
+
+.bullet-sep {
+  opacity: 0.5;
+}
+
+/* Responsividad */
+@media (max-width: 960px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .brand-col {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .brand-col {
+    grid-column: span 1;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   Sección de Desarrollo Web - VolcaTech
+   ========================================================================== */
+
+.footer-developer {
+  background-color: #071524;
+  border-top: 1px solid rgba(217, 226, 236, 0.08);
+  padding: 14px 0 16px;
+  font-family: var(--font-body);
+}
+
+.footer-developer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.developer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.developer-text {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: #FFFFFF;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  line-height: 1.4;
+}
+
+.developer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(54, 169, 214, 0.45);
+  text-underline-offset: 3px;
+  border-radius: var(--radius-sm);
+  padding: 3px 6px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast), transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.developer-logo {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform var(--transition-fast);
+}
+
+.developer-name {
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-fast);
+}
+
+.developer-link:hover {
+  color: var(--color-secondary);
+  text-decoration-color: var(--color-secondary);
+}
+
+.developer-link:hover .developer-name {
+  color: var(--color-secondary);
+}
+
+.developer-link:hover .developer-logo {
+  transform: scale(1.08);
+}
+
+.developer-link:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+  background-color: rgba(54, 169, 214, 0.12);
+  text-decoration-color: var(--color-secondary);
+}
+
+.developer-tagline {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: #D9E2EC;
+  margin: 0;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .footer-developer {
+    padding: 12px 0 14px;
+  }
+
+  .developer-text {
+    font-size: 0.78125rem;
+  }
+
+  .developer-tagline {
+    font-size: 0.71875rem;
+    padding: 0 10px;
+  }
+}

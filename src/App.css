@@ -1,0 +1,11 @@
+/* App layout wrapper */
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main#contenido-principal {
+  flex: 1;
+  outline: none;
+}
