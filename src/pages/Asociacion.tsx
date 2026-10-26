@@ -11,6 +11,7 @@ import { SEO } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { SectionHeader } from '../components/common/SectionHeader';
 import { AUTORIDADES_ASLOP, INSTITUCIONAL_INFO } from '../data/mockData';
+import { getAssetUrl } from '../utils/assets';
 import './Asociacion.css';
 
 export const Asociacion: React.FC = () => {
@@ -103,7 +104,7 @@ export const Asociacion: React.FC = () => {
             <div className="history-side">
               <div className="history-image-card card">
                 <img
-                  src="/images/barbell-chalk.jpg"
+                  src={getAssetUrl('/images/barbell-chalk.jpg')}
                   alt="Barra olímpica y magnesio en centro de tecnificación santafesino"
                   className="history-img"
                   loading="lazy"

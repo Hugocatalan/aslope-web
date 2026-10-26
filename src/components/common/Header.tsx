@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Calendar, Shield } from 'lucide-react';
+import { getAssetUrl } from '../../utils/assets';
 import './Header.css';
 
 export const Header: React.FC = () => {
@@ -70,7 +71,7 @@ export const Header: React.FC = () => {
           <Link to="/" className="brand-link" aria-label="Ir al inicio - Asociación Santafesina de Levantamiento Olímpico de Pesas">
             <div className="shield-wrapper">
               <img
-                src="/logo-aslop.jpeg"
+                src={getAssetUrl('/logo-aslop.jpeg')}
                 alt="Escudo oficial de la Asociación Santafesina de Levantamiento Olímpico de Pesas"
                 className="official-shield"
                 width="128"

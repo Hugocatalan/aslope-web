@@ -17,6 +17,7 @@ import { SectionHeader } from '../components/common/SectionHeader';
 import { CompetenciaCard } from '../components/common/CompetenciaCard';
 import { NoticiaCard } from '../components/common/NoticiaCard';
 import { ClubCard } from '../components/common/ClubCard';
+import { getAssetUrl } from '../utils/assets';
 import {
   COMPETENCIAS_DATA,
   NOTICIAS_DATA,
@@ -50,7 +51,7 @@ export const Home: React.FC = () => {
       <section className="hero-section" aria-label="Portada institucional">
         <div className="hero-backdrop">
           <img
-            src="/images/hero-weightlifting.jpg"
+            src={getAssetUrl('/images/hero-weightlifting.jpg')}
             alt="Atleta en plataforma oficial de competencia de levantamiento olímpico de pesas"
             className="hero-bg-image"
             fetchPriority="high"
@@ -135,7 +136,7 @@ export const Home: React.FC = () => {
               <div className="presentation-shield-card card mb-4">
                 <div className="presentation-shield-circle">
                   <img
-                    src="/logo-aslop.jpeg"
+                    src={getAssetUrl('/logo-aslop.jpeg')}
                     alt="Escudo oficial de la Asociación Santafesina de Levantamiento Olímpico de Pesas"
                     className="presentation-shield-img"
                     width="150"

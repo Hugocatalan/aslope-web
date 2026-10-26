@@ -11,6 +11,7 @@ import {
 import { SEO } from '../components/common/SEO';
 import { Breadcrumbs } from '../components/common/Breadcrumbs';
 import { NOTICIAS_DATA } from '../data/mockData';
+import { getAssetUrl } from '../utils/assets';
 import './NoticiaDetalle.css';
 
 export const NoticiaDetalle: React.FC = () => {
@@ -83,7 +84,7 @@ export const NoticiaDetalle: React.FC = () => {
           {/* Imagen Principal */}
           <figure className="article-featured-media">
             <img
-              src={noticia.imagenUrl}
+              src={getAssetUrl(noticia.imagenUrl)}
               alt={noticia.titulo}
               className="article-img"
               width="800"

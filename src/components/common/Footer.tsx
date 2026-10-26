@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Mail, MapPin, Award, ShieldCheck, ChevronRight } from 'lucide-react';
 import { INSTITUCIONAL_INFO } from '../../data/mockData';
 import { InstagramIcon } from './InstagramIcon';
+import { getAssetUrl } from '../../utils/assets';
 import volcatechLogo from '../../assets/images/03-isotipo.png';
 import './Footer.css';
 
@@ -16,7 +17,7 @@ export const Footer: React.FC = () => {
           <div className="footer-col brand-col">
             <div className="footer-brand">
               <img
-                src="/logo-aslop.jpeg"
+                src={getAssetUrl('/logo-aslop.jpeg')}
                 alt="Escudo oficial ASLOP"
                 className="footer-shield"
                 width="80"

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight } from 'lucide-react';
 import type { Noticia } from '../../types';
+import { getAssetUrl } from '../../utils/assets';
 import './NoticiaCard.css';
 
 interface NoticiaCardProps {
@@ -14,7 +15,7 @@ export const NoticiaCard: React.FC<NoticiaCardProps> = ({ noticia, featured = fa
     <article className={`card noticia-card ${featured ? 'noticia-featured' : ''}`}>
       <div className="noticia-image-wrapper">
         <img
-          src={noticia.imagenUrl}
+          src={getAssetUrl(noticia.imagenUrl)}
           alt={noticia.titulo}
           className="noticia-img"
           loading="lazy"
